@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+  <table class="center">
+    <tr>
+      <td colspan="4">
+        <div id="previous" class="col-xs-9"></div></td>
+      <td colspan="1">
+        <button class="col-xs-3" onclick='showPrevious()'>^</button></td>
+    </tr>
+  </table>
+  <form class="calc">
+    <p class="calc-display">
+      <input type="text" name="res" id="res" value="0" class="calc-display-input" onfocus="this.blur()">
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button calc-button-blue" VALUE=" sin" ONCLICK="if (checkNum(this.form.display.value)) { sin(this.form) }" >sin()</button>
+      <button type="button" class="calc-button calc-button-blue" VALUE="cos" ONCLICK="if (checkNum(this.form.display.value)) { cos(this.form) }">cos()</button>
+      <button type="button" class="calc-button calc-button-blue" VALUE=" tan" ONCLICK="if (checkNum(this.form.display.value)) { tan(this.form) }">tan()</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" value="/" onclick="addChar(this.form.display, '/')">÷</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" VALUE="  7  " ONCLICK="addChar(this.form.display, '7')">7</button>
+      <button type="button" class="calc-button" VALUE="8" ONCLICK="addChar(this.form.display, '8')">8</button>
+      <button type="button" class="calc-button" value="9" ONCLICK="addChar(this.form.display, '9')">9</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" VALUE="   *   " ONCLICK="addChar(this.form.display, '*')">x</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" VALUE="4" ONCLICK="addChar(this.form.display, '4')">4</button>
+      <button type="button" class="calc-button" VALUE="5" ONCLICK="addChar(this.form.display, '5')">5</button>
+      <button type="button" class="calc-button" VALUE="6" ONCLICK="addChar(this.form.display, '6')">6</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" VALUE="   -   " ONCLICK="addChar(this.form.display, '-')">-</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" VALUE="  1  " ONCLICK="addChar(this.form.display, '1')">1</button>
+      <button type="button" class="calc-button" VALUE="2" ONCLICK="addChar(this.form.display, '2')">2</button>
+      <button type="button" class="calc-button" VALUE="3" ONCLICK="addChar(this.form.display, '3')">3</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" VALUE="+" ONCLICK="addChar(this.form.display, '+')">+</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" VALUE="  0  " ONCLICK="addChar(this.form.display, '0')">0</button>
+      <button type="button" class="calc-button" VALUE="   .  " ONCLICK="addChar(this.form.display, '.')">.</button>
+      <button type="button" class="calc-button" onclick="this.form.display.value = 0">C</button>
+      <button type="button" value="clear" class="calc-button calc-button-yellow calc-button-big" ONCLICK="if (checkNum(this.form.display.value)) { compute(this.form) }">=</button>
+    </p>
+  </form>
+
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' type="text/javascript"></script>
+      <script src='js/calc.js' type="text/javascript"></script>
+
+</script>
+</body>
+</html>
